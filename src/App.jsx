@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import './App.css'
+import AllPuppies from './components/AllPuppies'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-    <h1> Puppy Bowl Revisited</h1>
+    <h1>Puppy Bowl Roster</h1>
+    <AllPuppies/>
     </>
   )
 }
