@@ -26,7 +26,7 @@ const [newPuppy, setNewPuppy] =useState({})
                 <label>TeamID:
                     <input type="number" id="teamId"></input>
                 </label>
-                <button onClick={(e)=> setNewPuppy(e)}>Add</button>
+                <button id="form-button">Add</button>
             </form>
         </>
 
