@@ -17,11 +17,16 @@ const AllPuppies = () => {
     },[])
     return (
         <>
-          {allPuppiesRoster && allPuppiesRoster.map((singlePuppy) => {
-            return <div key={singlePuppy.id}> 
-                        <p>{singlePuppy.name}</p>    
-                    </div>
+        <section className="main-window">
+            {allPuppiesRoster && allPuppiesRoster.map((singlePuppy) => {
+                return <div className={'puppy-card'} key={singlePuppy.id}> 
+                            <p>{singlePuppy.name}</p> 
+                            <img src={singlePuppy.imageUrl} alt="cute puppy" height={'200px'} width={'180px'}/>   
+                        </div>
           })}  
+
+
+        </section>
         </>
 
     )
