@@ -1,32 +1,32 @@
-import AddPuppy from "./AddPuppy"
+import { useState } from "react"
 
 
 const AddPuppyForm = () => {
-
+const [newPuppy, setNewPuppy] =useState({})
 
     return (
         <>
             <h2>Add Puppy</h2>
             <form>
                 <label>Name:
-                    <input type="text"></input>
+                    <input type="text" id="name"></input>
                 </label>
                 <label>Breed:
-                    <input type="text"></input>
+                    <input type="text" id="breed"></input>
                 </label>
                 <label>Status:
-                    <select>
+                    <select id="status">
                         <option value={'bench'}>Bench</option>
                         <option value={'field'}>Field</option>
                     </select>
                 </label>
                 <label>Image URL:
-                    <input type="text"></input>
+                    <input type="text" id="imagUrl"></input>
                 </label>
                 <label>TeamID:
-                    <input type="number"></input>
+                    <input type="number" id="teamId"></input>
                 </label>
-                <button onClick={()=> AddPuppy()}>Add</button>
+                <button onClick={(e)=> setNewPuppy(e)}>Add</button>
             </form>
         </>
 
