@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 
-const AllPuppies = () => {
+const AllPuppies = ({setSinglePuppyId}) => {
     const [allPuppiesRoster, setAllPuppiesRoster] = useState([])
 
     useEffect(()=> {
@@ -19,12 +19,11 @@ const AllPuppies = () => {
         <>
         <section className="main-window">
             {allPuppiesRoster && allPuppiesRoster.map((singlePuppy) => {
-                return <div className={'puppy-card'} key={singlePuppy.id}> 
+                return <div className={'puppy-card'} onClick={()=> {setSinglePuppyId(singlePuppy.id)}} key={singlePuppy.id}> 
                             <p>{singlePuppy.name}</p> 
-                            <img src={singlePuppy.imageUrl} alt="cute puppy" height={'200px'} width={'180px'}/>   
+                            <img src={singlePuppy.imageUrl} alt="cute puppy" height={'200px'} width={'180px'}/> 
                         </div>
           })}  
-
 
         </section>
         </>
