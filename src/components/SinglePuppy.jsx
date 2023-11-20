@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 
-const SinglePuppy = ({singlePuppyId}) => {
+const SinglePuppy = ({singlePuppyId, setSinglePuppyId}) => {
     const [singlePuppyDetails, setSinglePuppyDetails] = useState({})
 
 
@@ -21,6 +21,9 @@ getSinglePuppyDetails()
 return (
 
     <>
+        <button onClick={()=> {
+            setSinglePuppyId(null)
+        }}>Back</button>
         <h2>Name: {singlePuppyDetails.name}</h2>
         <h2>Breed: {singlePuppyDetails.breed}</h2>
         <h2>Status: {singlePuppyDetails.status}</h2>
