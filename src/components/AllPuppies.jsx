@@ -10,7 +10,6 @@ const AllPuppies = ({setSinglePuppyId}) => {
             `)
             const responseJson = await response.json()
             setAllPuppiesRoster(responseJson.data.players)
-            console.log(allPuppiesRoster)
 
         }
         getAllPuppies()

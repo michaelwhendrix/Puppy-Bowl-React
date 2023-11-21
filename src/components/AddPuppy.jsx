@@ -1,6 +1,7 @@
 
 
-const AddPuppy = async({name, breed, imageUrl,status,teamId}) => {
+const AddPuppy = async(name, breed, status,imageUrl,teamId) => {
+    console.log(name)
     try {
         const response = await fetch(
           'https://fsa-puppy-bowl.herokuapp.com/api/2310-FSA-ET-WEB-FT-SF/players',
@@ -10,11 +11,11 @@ const AddPuppy = async({name, breed, imageUrl,status,teamId}) => {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-              name: {name},
-              breed: {breed},
-              status: {status},
-              imageUrl: {imageUrl},
-              teamId: {teamId}
+              name: name,
+              breed: breed,
+              status: status,
+              imageUrl: imageUrl,
+              teamId: teamId
             }),
           }
         );
