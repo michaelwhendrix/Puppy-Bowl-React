@@ -7,7 +7,6 @@ const [newPuppyBreed, setNewPuppyBreed] =useState('')
 const [newPuppyStatus, setNewPuppyStatus] =useState('')
 const [newPuppyImageUrl, setNewPuppyImageUrl] =useState('')
 const [newPuppyTeamId, setNewPuppyTeamId] =useState(null)
-const [newPuppy, setNewPuppy] =useState({})
 
     return (
         <>
@@ -34,7 +33,6 @@ const [newPuppy, setNewPuppy] =useState({})
                 </label>
                 <button onClick={(event)=>{
                     event.preventDefault()
-                    console.log(newPuppyName)
                     AddPuppy(newPuppyName,
                             newPuppyBreed,
                             newPuppyStatus,
