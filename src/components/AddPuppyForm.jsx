@@ -21,6 +21,7 @@ const [newPuppyTeamId, setNewPuppyTeamId] =useState(null)
                 </label>
                 <label>Status:
                     <select onChange={(event) =>                setNewPuppyStatus(event.target.value)}>
+                        <option value={'bench'}></option>
                         <option value={'bench'}>Bench</option>
                         <option value={'field'}>Field</option>
                     </select>
@@ -29,7 +30,8 @@ const [newPuppyTeamId, setNewPuppyTeamId] =useState(null)
                     <input type="text" onChange={(event) =>                setNewPuppyImageUrl(event.target.value)}></input>
                 </label>
                 <label>TeamID:
-                    <input type="number" onChange={(event)=>               setNewPuppyTeamId(event.target.value)}></input>
+                    <input type="number" onChange={(event)=>               setNewPuppyTeamId(event.target.value)}
+                    min={'1'} max={'4'}></input>
                 </label>
                 <button onClick={(event)=>{
                     event.preventDefault()
